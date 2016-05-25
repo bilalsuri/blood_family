@@ -1,0 +1,44 @@
+﻿@model List<Bloodfamily.Models.Donor>
+@{
+    Layout = "~/Views/Shared/system/_System.cshtml";
+}
+
+<div style="margin-left:400px;">
+    <form method="post" action='/Admin/Decide'>
+       
+        @foreach(var s in Model)
+        {
+            
+         <img src="~/Images/@s.Image" height="150" width="150" />
+            <div class="row">
+                <div class="col-md-4">
+                    <font face="Times New Roman">
+                        <h4 style="color:red;">Personel Info:</h4>
+                        <p style="margin-left:120px;">Name:   @s.FullName</p>
+                        <p style="margin-left:120px;">DOB:  @s.Age</p>
+                        <p style="margin-left:120px;">Occupation:   @s.Occupation</p>
+                        <p style="margin-left:120px;">Sex:   @s.Sex</p>
+                    </font>
+
+                </div>
+                <div class="col-md-4">
+                    <font face="Times New Roman">
+                        <h4 style="color:red;">Contact Info:</h4>
+                        <p style="margin-left:120px;">Email:   @s.Email</p>
+                        <p style="margin-left:120px;">Phone:  @s.Telephone</p>
+                        <p style="margin-left:120px;">Mobile:   @s.Mobile</p>
+                        <p style="margin-left:120px;">Adress:   @s.Adress</p>
+                    </font>
+                </div>
+            </div>
+            <font face="Times New Roman">
+                <h4 style="color:red;">Blood Info:</h4>
+                <p style="margin-left:120px;">Blood group:   @s.Bloodgroup</p>
+                <p style="margin-left:120px;">Last Donated:  @s.Lastdonated</p>
+            </font>
+            <button type="submit" name="id" value="@s.UserName" id="btn" class="btn btn-primary">Message</button>
+            <button type="submit" name="id" value="@s.Id" id="btn" class="btn btn-primary">Delete</button>
+
+}
+        </form>
+</div>

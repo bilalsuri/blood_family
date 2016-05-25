@@ -1,0 +1,39 @@
+﻿@model List<Bloodfamily.Models.Donor>
+@{
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+
+<div style="margin-left:400px;">
+@foreach(var s in Model)
+{
+     <img src="~/Images/@s.Image" height="150" width="150" />
+    <div class="row">
+        <div class="col-md-4">
+            <font face="Times New Roman">
+                <h4 style="color:red;">Personel Info:</h4>
+                <p style="margin-left:120px;">Name:   @s.FullName</p>
+                <p style="margin-left:120px;">DOB:  @s.Age</p>
+                <p style="margin-left:120px;">Occupation:   @s.Occupation</p>
+                <p style="margin-left:120px;">Sex:   @s.Sex</p>
+            </font>
+
+        </div>
+        <div class="col-md-4">
+            <font face="Times New Roman">
+                <h4 style="color:red;">Contact Info:</h4>
+                <p style="margin-left:120px;">Email:   @s.Email</p>
+                <p style="margin-left:120px;">Phone:  @s.Telephone</p>
+                <p style="margin-left:120px;">Mobile:   @s.Mobile</p>
+                <p style="margin-left:120px;">Adress:   @s.Adress</p>
+            </font>
+        </div>
+    </div>
+    <font face="Times New Roman">
+        <h4 style="color:red;">Blood Info:</h4>
+        <p style="margin-left:120px;">Blood group:   @s.Bloodgroup</p>
+        <p style="margin-left:120px;">Last Donated:  @s.Lastdonated</p>
+    </font>
+}
+    <a style="width:150px; margin-bottom:30px; margin-left:10px;" href="/Donors/Update" class="btn btn-primary">Update Profile</a>
+
+</div>

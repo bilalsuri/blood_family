@@ -1,0 +1,328 @@
+﻿@{
+    Layout = "~/Views/Shared/User/_UserLayout.cshtml";
+}
+<div class="row">
+    <div class="col-md-6">
+        <img src="~/Images/su.jpg" height="300" width="350" style="margin-top:100px; margin-left:200px;" />
+        <font face="Times New Roman"><h1 style="color: red; margin-left: 200px;">Join The Blood Family</h1></font>
+    </div>
+
+    <font face="Times New Roman"><h1 style="color: red;">Get Register Here</h1></font>
+    <div class="col-md-6">
+
+        <table width="200" height="1">
+            <tr>
+                <td width="100" height="1">
+                    <p align="left">
+                        <strong>
+                            <font face="Verdana, Arial, Helvetica" size="2">All Fields marked with</font><font color="#ff0000" size="4" face="Verdana, Arial, Helvetica">*</font><font face="Verdana, Arial, Helvetica" size="2"> are required </font>
+                            <a href="welcome.asp">
+                            </a>
+                        </strong>
+                </td>
+            </tr>
+        </table>
+
+        <font face="Times New Roman">
+            <h4 style="color:red;">Login Info:</h4>
+        </font>
+
+        <form action="/Donors/Adduser" method="post">
+            <table style=" border-collapse: separate; border-spacing: 0 1em; width:100px; height:6px">
+                <tbody>
+                    <tr>
+                        <td width=" 100" bgcolor="#BFF2EB" height="19">
+                            <font color="red">*</font>User Name:
+                        </td>
+                        <td width="100" height="19">
+                            <input maxlength="50" name="uname">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width=" 100" bgcolor="#BFF2EB" height="19">
+                            <font color="red">*</font>Password:
+                        </td>
+                        <td width="100" height="19">
+                            <input class="form-control" type="password" size="35" name="pswd">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font face="Times New Roman">
+                                <h4 style="color:red;">Personel Info:</h4>
+                            </font>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width=" 100" bgcolor="#BFF2EB" height="19">
+                            <font color="red">*</font>Full Name:
+                        </td>
+                        <td width="100" height="19">
+                            <input maxlength="50" name="name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#BFF2EB" height="1">Date of Birth: (dd/mm/yyyy)</td>
+                        <td>
+
+                            <p>
+                                <select name="birth_d">
+                                    <option selected value="00">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                /
+                                <select name="birth_m">
+                                    <option selected value="00">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                /
+                                <select name="birth_y">
+                                    <option selected> 0000 </option>
+                                    <option value="2014"> 1960 </option>
+                                    <option value="2015"> 1961 </option>
+                                    <option value="2016"> 1962 </option>
+                                    <option value="2017"> 1963 </option>
+                                    <option value="2018"> 1964 </option>
+                                    <option value="2019"> 1965 </option>
+                                    <option value="2019"> 1966 </option>
+                                    <option value="2019"> 1967 </option>
+                                    <option value="2019"> 1968 </option>
+                                    <option value="2019"> 1969 </option>
+                                    <option value="2019"> 1970 </option>
+                                    <option value="2015"> 1971 </option>
+                                    <option value="2016"> 1972 </option>
+                                    <option value="2017"> 1973 </option>
+                                    <option value="2018"> 1974 </option>
+                                    <option value="2019"> 1975 </option>
+                                    <option value="2019"> 1976 </option>
+                                    <option value="2019"> 1977 </option>
+                                    <option value="2019"> 1978 </option>
+                                    <option value="2019"> 1979 </option>
+                                    <option value="2019"> 1980 </option>
+                                    <option value="2015"> 1981 </option>
+                                    <option value="2016"> 1982 </option>
+                                    <option value="2017"> 1983 </option>
+                                    <option value="2018"> 1984 </option>
+                                    <option value="2019"> 1985 </option>
+                                    <option value="2019"> 1986 </option>
+                                    <option value="2019"> 1987 </option>
+                                    <option value="2019"> 1988 </option>
+                                    <option value="2019"> 1989 </option>
+                                    <option value="2019"> 1990 </option>
+                                    <option value="2015"> 1991 </option>
+                                    <option value="2016"> 1992 </option>
+                                    <option value="2017"> 1993 </option>
+                                    <option value="2018"> 1994 </option>
+                                    <option value="2019"> 1995 </option>
+                                    <option value="2019"> 1996 </option>
+                                    <option value="2019"> 1997 </option>
+                                    <option value="2019"> 1998 </option>
+                                    <option value="2019"> 1999 </option>
+                                    <option value="2019"> 2000 </option>
+                                    <option value="2015"> 2001 </option>
+                                    <option value="2016"> 2002 </option>
+                                    <option value="2017"> 2003 </option>
+                                </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#BFF2EB" height="26"><font color="red">*</font>Sex</td>
+                        <td colspan="6" height="26">
+                            <select name="Sex" size="1" tabindex="4">
+                                <option selected value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#BFF2EB" height="1">Occupation:</td>
+                        <td height="1"><input maxlength="50" name="ocu"> </td>
+
+                    </tr>
+                    <tr>
+                        <td>
+                            <font face="Times New Roman">
+                                <h4 style="color:red;">Contact Info:</h4>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#BFF2EB" height="26"><font color="red">*</font>Address:</td>
+                        <td height="26">
+                            <input maxlength="150" name="add">
+                        </td>
+                    </tr>
+
+
+
+                    <tr>
+                        <td bgcolor="#BFF2EB" height="25"><p>Telephone No.:</td>
+                        <td height="25">
+
+                            <p>
+                                <input maxlength="18" name="phone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#BFF2EB" height="25"><p>Mobile.:</td>
+                        <td>
+
+                            <p>
+                                <input maxlength="18" name="mphone">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#BFF2EB" height="25">E-mail:</td>
+                        <td colspan="6" height="25">
+
+                            <p>
+                                <input maxlength="30" name="email">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <font face="Times New Roman">
+                                <h4 style="color:red;">Blood Info:</h4>
+                            </font>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#BFF2EB" align="left" height="1">
+                            <font color="red">*</font>Your Blood Group:
+                        </td>
+                        <td height="1">
+                            <p>
+                                <select name="bg" size="1">
+                                    <option selected value="Select Group" tabindex="13">Select Group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td bgcolor="#BFF2EB" height="1">Last Donated: (dd/mm/yyyy)</td>
+                        <td>
+
+                            <p>
+                                <select name="last_don_d">
+                                    <option selected value="00">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                    <option value="13">13</option>
+                                    <option value="14">14</option>
+                                    <option value="15">15</option>
+                                    <option value="16">16</option>
+                                    <option value="17">17</option>
+                                    <option value="18">18</option>
+                                    <option value="19">19</option>
+                                    <option value="20">20</option>
+                                    <option value="21">21</option>
+                                    <option value="22">22</option>
+                                    <option value="23">23</option>
+                                    <option value="24">24</option>
+                                    <option value="25">25</option>
+                                    <option value="26">26</option>
+                                    <option value="27">27</option>
+                                    <option value="28">28</option>
+                                    <option value="29">29</option>
+                                    <option value="30">30</option>
+                                    <option value="31">31</option>
+                                </select>
+                                /
+                                <select name="last_don_m">
+                                    <option selected value="00">00</option>
+                                    <option value="01">01</option>
+                                    <option value="02">02</option>
+                                    <option value="03">03</option>
+                                    <option value="04">04</option>
+                                    <option value="05">05</option>
+                                    <option value="06">06</option>
+                                    <option value="07">07</option>
+                                    <option value="08">08</option>
+                                    <option value="09">09</option>
+                                    <option value="10">10</option>
+                                    <option value="11">11</option>
+                                    <option value="12">12</option>
+                                </select>
+                                /
+                                <select name="last_don_y">
+                                    <option selected> 0000 </option>
+                                    <option value="2014"> 2014 </option>
+                                    <option value="2015"> 2015 </option>
+                                    <option value="2016"> 2016 </option>
+                                    <option value="2017"> 2017 </option>
+                                    <option value="2018"> 2018 </option>
+                                    <option value="2019"> 2019 </option>
+                                </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                            <p>
+                                <input type="submit" value="Submit" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </div>
+</div>

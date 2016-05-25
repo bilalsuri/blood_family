@@ -1,0 +1,24 @@
+﻿@model List<Bloodfamily.Models.Message>
+@{
+    Layout = "~/Views/Shared/system/_System.cshtml";
+}
+    @foreach (var s in Model)
+    {
+        <table style=" border-collapse: separate; border-spacing: 0 1em; width: 800px; margin-left: 300px;">
+            <tr>
+                @if (@s.sender == (string)Session["e"])
+                {
+                    <td width="500px"><font color="red">Sender: @s.sender</font><br>@s.msg</td>
+                    <td style="margin-top:0"><font color="red">@s.Mtime&nbsp;&nbsp;&nbsp;@s.Mdate</font></td>
+                }
+                else
+                {
+                    <td width="500px"><font color="blue">Sender: @s.sender</font><br>@s.msg</td>
+                    <td style="margin-top:0"><font color="blue">@s.Mtime&nbsp;&nbsp;&nbsp;@s.Mdate</font></td>
+                }
+
+
+            </tr>
+
+        </table>
+    }

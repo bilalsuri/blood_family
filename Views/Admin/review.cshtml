@@ -1,0 +1,18 @@
+﻿@model List<Bloodfamily.Models.Message>
+@{
+    Layout = "~/Views/Shared/system/_System.cshtml";
+}
+<form method="post" action='/Admin/message'>
+    @foreach (var s in Model)
+    {
+        <table style=" border-collapse: separate; border-spacing: 0 1em; width: 800px; margin-left: 300px;">
+            <tr>
+                <td width="500px"><font color="red">Sender: @s.sender</font><br>@s.msg</td>
+                <td style="margin-top:0" width="200px"><font color="red">@s.Mtime&nbsp;&nbsp;&nbsp;@s.Mdate</font></td>
+                <td width="200px"><button type="submit" name="id" value="@s.sender" id="btn" class="btn btn-primary">Reply</button><button type="submit" name="id" value="@s.Id" id="btn" class="btn btn-primary">Delete</button></td>
+            </tr>
+
+        </table>
+    }
+
+</form>

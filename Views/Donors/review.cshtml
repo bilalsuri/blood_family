@@ -1,0 +1,9 @@
+﻿@model List<Bloodfamily.Models.Message>
+@{
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+<form method="post" action="/Donors/SaveReview">
+    <h1 style="color:red;margin-left:300px;">Type Your Review or complaint here!</h1>
+    <textarea cols="50" rows="4" maxlength="1000" name="comment" style=" border-collapse: separate;margin-top:50px; border-spacing: 0 1em; width: 600px; height:300px; margin-left: 300px; resize:none"></textarea><br>
+    <button style="width:80px; margin-top:30px; margin-left:825px;" class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+</form>

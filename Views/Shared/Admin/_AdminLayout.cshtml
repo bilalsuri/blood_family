@@ -1,0 +1,161 @@
+﻿<html>
+<head>
+    <title>Blood Family</title>
+    <link rel="shortcut icon" href="/Images/icon.jpg" />
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="~/Content/styles.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+    <script src="~/Scripts/script.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/npm.js"></script>
+
+
+    <script language="JavaScript">
+        function butCheckForm_onclick() {
+            var myForm = document.form1;
+            if (myForm.age.value == "" || myForm.uname.value
+         == "" || myForm.subdiv.value == "Sub-Division" || myForm.add.value == "" || myForm.bg.value == "Select Group") {
+
+                if (myForm.uname.value == "") {
+                    alert("Please enter your name");
+                    myForm.uname.focus();
+
+                }
+                else {
+                    if (myForm.age.value == "") {
+                        alert("Please enter your Age");
+                        myForm.age.focus();
+                    }
+                    else {
+                        if (myForm.add.value == "") {
+                            alert("Please enter your Address");
+                            myForm.add.focus();
+                        }
+                        else {
+                            if (myForm.bg.value == "Select Group") {
+                                alert("Please select your Blood group");
+                                myForm.bg.focus();
+                            }
+                            else {
+                                alert("Please select your sub division");
+                                myForm.subdiv.focus();
+                            }
+                        }
+                    }
+                }
+            }
+            else {
+                alert("Thanks for completing the form ");
+                myForm.submit();
+            }
+        }
+        function txtAge_onblur() {
+            var txtAge = document.form1.age;
+            if (isNaN(txtAge.value) == true) {
+                alert("Please enter a valid age");
+                txtAge.focus();
+                txtAge.select();
+            }
+
+            else {
+                if (txtAge.value < 18) {
+                    alert("Age can not be less then 18");
+                    txtAge.focus();
+                    txtAge.select();
+                }
+                else {
+                    if (txtAge.value > 60) {
+                        alert("Age can not be greater then 60");
+                        txtAge.focus();
+                        txtAge.select();
+                    }
+                }
+
+            }
+        }
+
+    </script>
+    <style>
+        #foobar ul {
+            margin: 0;
+            list-style-type: none;
+            text-align: center;
+            background-color: red;
+            clear: both;
+            padding: 0;
+            vertical-align: middle;
+            line-height: normal;
+            position: fixed;
+            bottom: 0px;
+            width: 100%;
+        }
+
+            #foobar ul li {
+                display: inline-block;
+            }
+
+                #foobar ul li a {
+                    padding: 0.2em 2em;
+                    color: #fff;
+                    font-family: Calibri;
+                    text-decoration: none;
+                }
+
+                    #foobar ul li a:hover {
+                        text-decoration: underline;
+                    }
+    </style>
+
+</head>
+
+<body>
+    <div class="wrapper menu" id='cssmenu'>
+
+        <ul>
+            <li class='active'><a href="/Donors/Home">HOME</a></li>
+            <li><a href="/Donors/check">VIEW PROFILE</a></li>
+            <li><a href="/Donors/Mymessage">Messages</a></li>
+            <li><a href="/Donors/review">Review & Complaints</a></li>
+            <li><a href="/Home/Index">LOGOUT</a></li>
+            <li>
+                <form id="searchbox" action="/Donors/Index">
+                    <input id="search" type="text" placeholder="search donor by area" name="blood">
+                    <select name="group">
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                    </select>
+                    <input id="submit" type="submit" value="Search">
+                </form>
+            </li>
+        </ul>
+    </div>
+
+    @RenderBody()
+    <div id="foobar">
+        <footer>
+            <ul>
+                <li>&copy;2016 -</li>
+                <li><a href="/Donors/bilal" target="_blank">Bilal Khan Suri</a></li>
+                <li><a href="/Donors/Privacy">Privacy Policy</a></li>
+                <li><a href="/Donors/AboutUS">About Us</a></li>
+                <li><a href="/Donors/Contact">Contact Us</a></li>
+            </ul>
+        </footer>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+﻿@{
+    Layout = "~/Views/Shared/User/_UserLayout.cshtml";
+}
+
+<div class="row">
+    <div class="col-md-6">
+        <img src="~/Images/si.jpg" height="300" width="350" style="margin-top:100px; margin-left:200px;" />
+        <font face="Times New Roman"><h1 style="color: red; margin-left: 200px;">Login The Blood Family</h1></font>
+    </div>
+    <div class="col-md-6">
+        <hr>
+        <h2 class="intro-text text-centre" style="text-align: center; font-family: Castellar; color: red;">
+            Login Form
+            <strong></strong>
+        </h2>
+        <hr>
+        <form class="form-signin" method="post" action="/Donors/Logincheck">
+            <h2 class="form-signin-heading" style="color:red;">Please Sign In</h2>
+            <font color="red">User Name:</font>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="text" id="inputEmail" style="width: 300px;" class="form-control" name="e">
+            <font color="red">Password:</font>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword" class="form-control" name="p" style="width: 300px;">
+            <div class="checkbox">
+                <label style="color:red;">
+                    <input type="checkbox" value="remember-me"> Remember me
+                </label>
+            </div>
+            <button style="width:100px;" class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+    </div>
+</div>

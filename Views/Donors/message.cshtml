@@ -1,0 +1,28 @@
+﻿@model List<Bloodfamily.Models.Message>
+@{
+    Layout = "~/Views/Shared/Admin/_AdminLayout.cshtml";
+}
+<form method="post" action="/Donors/Addmessage">
+    @foreach (var s in Model)
+    {
+        <table style=" border-collapse: separate; border-spacing: 0 1em; width: 800px; margin-left: 300px;">
+            <tr>
+                @if(@s.sender==(string)Session["e"])
+                { 
+                <td width="500px"><font color="red">Sender: @s.sender</font><br>@s.msg</td>
+                <td style="margin-top:0"><font color="red">@s.Mtime&nbsp;&nbsp;&nbsp;@s.Mdate</font></td>
+                }
+                else
+                {
+                 <td width="500px"><font color="blue">Sender: @s.sender</font><br>@s.msg</td>
+                 <td style="margin-top:0"><font color="blue">@s.Mtime&nbsp;&nbsp;&nbsp;@s.Mdate</font></td>
+                }
+                
+               
+            </tr>
+
+        </table>
+    }
+    <textarea cols="50" rows="4" maxlength="1000" name="comment" style=" border-collapse: separate;margin-top:50px; border-spacing: 0 1em; width: 600px; height:100px; margin-left: 300px; resize:none"></textarea><br>
+    <button style="width:80px; margin-top:30px; margin-left:825px;" class="btn btn-lg btn-primary btn-block" type="submit">Send</button>
+</form>

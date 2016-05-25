@@ -1,0 +1,20 @@
+﻿@model List<Bloodfamily.Models.Donor>
+@{
+    Layout = "~/Views/Shared/system/_System.cshtml";
+}
+<form method="post" action='/Admin/Profile'>
+    @foreach (var s in Model)
+    {
+        <table style=" border-collapse: separate; border-spacing: 0 1em; width: 800px; margin-left: 300px;">
+            <tr>
+                <td width="100"><img src="~/Images/@s.Image" height="100" width="100" /></td>
+                <td width="60px">Name:<br>Email:<br>Phone#:<br>Blood:<br>Adress:</td>
+                <td style="margin-top:0">@s.FullName<br>@s.Email<br>@s.Mobile<br>@s.Bloodgroup<br>@s.Adress</td>
+                <td><button type="submit" name="id" value="@s.Id" id="btn" class="btn btn-primary">Details</button></td>
+                <td><button type="submit" name="id" value="@s.UserName" id="btn" class="btn btn-primary">Messages</button></td>
+            </tr>
+
+        </table>
+    }
+
+</form>
